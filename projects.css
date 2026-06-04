@@ -1,0 +1,371 @@
+/* ============================================
+   RESET
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   BASIS LAYOUT FIX (BELANGRIJK)
+   ============================================ */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+main {
+    flex: 1;
+}
+
+/* ============================================
+   VARIABELEN
+   ============================================ */
+:root {
+    --cream: #f5f3f0;
+    --cream-dark: #ebe8e3;
+
+    --pink: #f4a4b4;
+    --pink-dark: #e892a4;
+
+    --text-dark: #2d2d2d;
+    --text-medium: #5a5a5a;
+    --text-light: #8a8a8a;
+
+    --white: #ffffff;
+    --shadow-soft: rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   NAV
+   ============================================ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 5%;
+
+    background: rgba(245, 243, 240, 0.95);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: var(--pink-dark);
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-dark);
+}
+
+/* ============================================
+   MAIN
+   ============================================ */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: var(--text-medium);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   FILTER BUTTONS
+   ============================================ */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.4rem;
+
+    border: 1px solid var(--cream-dark);
+    border-radius: 50px;
+
+    background: var(--white);
+    color: var(--text-medium);
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: white;
+}
+
+/* ============================================
+   PROJECT GRID
+   ============================================ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+/* ============================================
+   PROJECT CARD
+   ============================================ */
+.project-card {
+    background: var(--white);
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 2px 16px var(--shadow-soft);
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE */
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* CONTENT */
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    padding: 0.3rem 0.8rem;
+
+    background: rgba(244, 164, 180, 0.2);
+    color: var(--pink-dark);
+
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+/* TEXT */
+.project-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-content p {
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+}
+
+/* META */
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid var(--cream-dark);
+    padding-top: 1rem;
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--text-medium);
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    color: var(--pink-dark);
+}
+
+/* ============================================
+   MODAL (FIXED)
+   ============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--white);
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90%;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-links a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: var(--pink);
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.modal-links a:hover {
+    background: var(--pink-dark);
+}
+
+#modalFeatures {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+#modalFeatures li {
+    margin-bottom: 0.4rem;
+    color: var(--text-medium);
+}
+
+
+.modal-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 3rem;
+
+    background: var(--cream-dark);
+    color: var(--text-light);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+}

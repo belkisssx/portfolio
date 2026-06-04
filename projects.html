@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecten - Belkis El Arfaoui</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <a href="portfolio.html" class="logo">Mijn<span>Portfolio</span></a>
+        <ul class="nav-links">
+            <li><a href="projects.html" class="active">projecten</a></li>
+            <li><a href="leerplan.html">leerplan</a></li>
+            <li><a href="cv.html">cv</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>Mijn Projecten</h1>
+            <p>Een overzicht van mijn werk, van webontwikkeling tot design en alles daartussenin.</p>
+        </section>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Alles</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="app">Applicaties</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Project 1 -->
+            <article class="project-card" data-category="web" onclick="openModal('project1')">
+                <div class="project-image">
+                    <img src="assets/dokkie.png" alt="E-commerce Platform">
+                    <div class="project-overlay"><span class="view-project">Bekijk Project</span></div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+                    <h3>Dokkie</h3>
+                    <p>Beginners project.</p>
+                    <div class="project-meta">
+                        <span class="project-date">september 2025</span>
+                        <div class="project-links">
+                            <a href="#" title="Code bekijken"><i class="fas fa-code"></i></a>
+                            <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card" data-category="design" onclick="openModal('project2')">
+                <div class="project-image">
+                    <img src="assets/linder.png" alt="Brand Identity">
+                    <div class="project-overlay"><span class="view-project">Bekijk Project</span></div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags"><span class="tag">React Native</span><span class="tag">UI/UX</span></div>
+                    <h3>Linder</h3>
+                    <p>Linder is een exchange-of-service applicatie ontwikkeld voor Function Creep binnen Studio Dark Tech. De app brengt studenten samen die hulp zoeken bij een vak en in ruil ondersteuning kunnen bieden bij een vak waarin zij zelf sterk zijn.</p>
+                    <div class="project-meta">
+                        <span class="project-date">December 2025</span>
+                        <div class="project-links">
+                            <a href="#" title="Ontwerp bekijken"><i class="fas fa-palette"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card" data-category="app" onclick="openModal('project3')">
+                <div class="project-image">
+                    <img src="Assets/tricentis.png" alt="Mobile App">
+                    <div class="project-overlay"><span class="view-project">Bekijk Project</span></div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div>
+                    <h3>Tricentis HvA-UvA</h3>
+                    <p>Een cross-platform mobiele applicatie voor taakbeheer met real-time synchronisatie.</p>
+                    <div class="project-meta">
+                        <span class="project-date">November 2025</span>
+                        <div class="project-links">
+                            <a href="#" title="Code"><i class="fas fa-code"></i></a>
+                            <a href="#" title="Download"><i class="fas fa-mobile-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card" data-category="web" onclick="openModal('project4')">
+                <div class="project-image">
+                    <img src="Assets/game.png" alt="Dashboard">
+                    <div class="project-overlay"><span class="view-project">Bekijk Project</span></div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags"><span class="tag">Vue.js</span><span class="tag">D3.js</span></div>
+                    <h3>Game</h3>
+                    <p>Interactief data dashboard met real-time visualisaties, filters en export functionaliteit.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Oktober 2025</span>
+                        <div class="project-links">
+                            <a href="#" title="Code"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="project-card" data-category="web" onclick="openModal('project5')">
+                <div class="project-image">
+                    <img src="Assets/codeexchange.png" alt="Portfolio Website">
+                    <div class="project-overlay"><span class="view-project">Bekijk Project</span></div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span></div>
+                    <h3>Code Exchange</h3>
+                    <p>Persoonlijke portfolio website met animaties, responsive design en contactformulier.</p>
+                    <div class="project-meta">
+                        <span class="project-date">September 2025</span>
+                        <div class="project-links">
+                            <a href="#" title="Code"><i class="fas fa-code"></i></a>
+                            <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6 -->
+            <article class="project-card" data-category="design" onclick="openModal('project6')">
+                <div class="project-image">
+                    <img src="Assets/website.png" alt="UI Kit">
+                    <div class="project-overlay"><span class="view-project">Bekijk Project</span></div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags"><span class="tag">Figma</span><span class="tag">Design System</span></div>
+                    <h3>Game Website</h3>
+                    <p>Uitgebreide set van herbruikbare UI componenten met documentatie en design tokens.</p>
+                    <div class="project-meta">
+                        <span class="project-date">Augustus 2025</span>
+                        <div class="project-links">
+                            <a href="#" title="Ontwerp"><i class="fas fa-paintbrush"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img src="" alt="" class="modal-image" id="modalImage">
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <div id="modalTags" class="project-tags"></div>
+                <p id="modalDescription"></p>
+                <h4>Features</h4>
+                <ul id="modalFeatures"></ul>
+                <div class="modal-links">
+                    <a id="modalLive" href="#" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                    <a id="modalDetails" href="#" target="_blank"><i class="fas fa-info-circle"></i> Project Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Belkis El Arfaoui. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+        const projectData = {
+            project1: {
+                title: "Dokkie",
+                image: "assets/dokkie.png",
+                tags: ["HTML", "CSS", "Python"],
+                description: "Een beginners project met python.",
+                features: ["stuurt tikkies", "verdeelt het bedrag", "stuurt een email of sms"],
+                live: "#", details: "#"
+            },
+            project2: {
+                title: "Linder",
+                image: "assets/linder.png",
+                tags: ["React Native", "UI/UX", "Figma", "Javascript"],
+                description: "Linder is een exchange-of-service applicatie ontwikkeld voor Function Creep binnen Studio Dark Tech. De app brengt studenten samen die hulp zoeken bij een vak en in ruil ondersteuning kunnen bieden bij een vak waarin zij zelf sterk zijn.",
+                features: ["", "", "", "", "", ""],
+                live: "#", details: "#"
+            },
+            project3: {
+                title: "Tricentis HvA/UvA",
+                image: "assets/tricentis.png",
+                tags: ["Flutter", "Firebase", "Dart"],
+                description: "Cross-platform mobiele applicatie voor taakbeheer. Gebruikers kunnen taken aanmaken, organiseren in projecten, deadlines instellen en real-time samenwerken.",
+                features: ["Cross-platform (iOS & Android)", "Real-time synchronisatie", "Offline modus", "Push notificaties", "Team collaboration", "Donkere/lichte modus"],
+                live: "#", details: "#"
+            },
+            project4: {
+                title: "Game",
+                image: "assets/game.png",
+                tags: ["Vue.js", "D3.js", "REST API"],
+                description: "Interactief data dashboard voor het visualiseren van bedrijfsdata. Real-time updates, aanpasbare widgets en geavanceerde filters.",
+                features: ["Real-time data updates", "Interactieve grafieken met D3.js", "Aanpasbare dashboard layout", "Geavanceerde filtering", "Data export (CSV, PDF)", "Gebruikersrollen"],
+                live: "#", details: "#"
+            },
+            project5: {
+                title: "Code Exchange",
+                image: "assets/codeexchange.png",
+                tags: ["HTML/CSS", "JavaScript", "Responsive"],
+                description: "Persoonlijke portfolio website gebouwd van scratch. Bevat soepele animaties, responsive design en een werkend contactformulier.",
+                features: ["Custom animaties", "Mobile-first responsive design", "Contactformulier met validatie", "SEO geoptimaliseerd", "Snelle laadtijden", "WCAG toegankelijk"],
+                live: "#", details: "#"
+            },
+            project6: {
+                title: "Games website",
+                image: "assets/website.png",
+                tags: ["Figma", "Design System", "Documentation"],
+                description: "Uitgebreide set herbruikbare UI componenten ontworpen in Figma. Inclusief documentatie, design tokens en richtlijnen.",
+                features: ["50+ herbruikbare componenten", "Design tokens voor consistentie", "Auto-layout en varianten", "Uitgebreide documentatie", "Toegankelijkheidsrichtlijnen", "Versiebeheer"],
+                live: "#", details: "#"
+            }
+        };
+
+        // Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.classList.remove('hidden');
+                        card.classList.add('animate-in');
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('animate-in');
+                    }
+                });
+            });
+        });
+
+        // Modal
+        function openModal(projectId) {
+            const p = projectData[projectId];
+            if (!p) return;
+            document.getElementById('modalImage').src = p.image;
+            document.getElementById('modalTitle').innerText = p.title;
+            document.getElementById('modalDescription').innerText = p.description;
+            document.getElementById('modalTags').innerHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+            document.getElementById('modalFeatures').innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
+            document.getElementById('modalLive').href = p.live;
+            document.getElementById('modalDetails').href = p.details;
+            document.getElementById('projectModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        document.getElementById('projectModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('projectModal')) closeModal();
+        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+        // Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('animate-in'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        projectCards.forEach(card => observer.observe(card));
+    </script>
+</body>
+</html>

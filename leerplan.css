@@ -1,0 +1,225 @@
+/* ============================================
+   RESET
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   VARIABELEN (zelfde als andere pagina’s)
+   ============================================ */
+:root {
+    --cream: #f5f3f0;
+    --cream-dark: #ebe8e3;
+
+    --pink: #f4a4b4;
+    --pink-dark: #e892a4;
+
+    --text-dark: #2d2d2d;
+    --text-medium: #5a5a5a;
+    --text-light: #8a8a8a;
+
+    --white: #ffffff;
+    --shadow-soft: rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   BODY
+   ============================================ */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* ============================================
+   NAV (consistent)
+   ============================================ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 5%;
+
+    background: rgba(245, 243, 240, 0.95);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: var(--pink-dark);
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-dark);
+}
+
+/* ============================================
+   MAIN CARD
+   ============================================ */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.project {
+    max-width: 900px;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-soft);
+}
+
+/* ============================================
+   TITELS
+   ============================================ */
+.project h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--pink-dark);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.project h2,
+.project h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ============================================
+   TEXT
+   ============================================ */
+.project p {
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   TABELLEN (BELANGRIJKSTE DEEL)
+   ============================================ */
+.leerdoelen-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px var(--shadow-soft);
+}
+
+/* HEADER */
+.leerdoelen-tabel th {
+    background: var(--pink);
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+/* CELLS */
+.leerdoelen-tabel td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--cream-dark);
+    vertical-align: top;
+    color: var(--text-medium);
+}
+
+/* LINKS KOLOM (labels) */
+.leerdoelen-tabel td:first-child {
+    font-weight: 500;
+    color: var(--text-dark);
+    width: 30%;
+}
+
+/* HOVER EFFECT */
+.leerdoelen-tabel tr:hover {
+    background: rgba(244, 164, 180, 0.08);
+}
+
+/* ============================================
+   BUTTON
+   ============================================ */
+.project-btn {
+    display: inline-block;
+    margin-top: 2rem;
+
+    background: var(--pink);
+    color: white;
+
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--cream-dark);
+    color: var(--text-light);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+
+    .project {
+        padding: 2rem 1.2rem;
+    }
+
+    .project h1 {
+        font-size: 2rem;
+    }
+
+    .leerdoelen-tabel th,
+    .leerdoelen-tabel td {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
